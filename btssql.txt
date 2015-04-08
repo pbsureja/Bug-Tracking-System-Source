@@ -1,0 +1,48 @@
+--
+-- Table structure for table `client_details`
+--
+
+CREATE TABLE IF NOT EXISTS `client_details` (
+  `client_details_id` int(5) NOT NULL AUTO_INCREMENT,
+  `client_details_name` varchar(20) NOT NULL,
+  `client_details_password` varchar(10) NOT NULL,
+  `client_details_securityquestion` varchar(50) NOT NULL,
+  `client_details_answer` varchar(20) NOT NULL,
+  `client_details_phone_no` varchar(15) NOT NULL,
+  `client_details_address` varchar(200) NOT NULL,
+  `client_details_fax` varchar(10) NOT NULL,
+  `client_details_website` varchar(50) NOT NULL,
+  PRIMARY KEY (`client_details_id`)
+);
+
+INSERT INTO `client_details` (`client_details_id`, `client_details_name`, `client_details_password`, `client_details_securityquestion`, `client_details_answer`, `client_details_phone_no`, `client_details_address`, `client_details_fax`, `client_details_website`) VALUES
+(1, 'Prashilm', 'bhovanbhai', 'Who is your pet?', 'tommy', '9408557976', 'A-704, Motipalace plus appt Near Motibaug Timbavadi', '--', '--');
+
+
+--
+-- Table structure for table `reporter_type`
+--
+
+CREATE TABLE IF NOT EXISTS `reporter_type` (
+  `Reporter_Type_id` int(5) NOT NULL AUTO_INCREMENT,
+  `Reporter_Type_name` varchar(20) NOT NULL,
+  PRIMARY KEY (`Reporter_Type_id`)
+);
+INSERT INTO `reporter_type` (`Reporter_Type_id`, `Reporter_Type_name`) VALUES
+(1, 'Developer'),
+(3, 'Client');
+
+--
+-- Table structure for table `role_employee`
+--
+
+CREATE TABLE IF NOT EXISTS `role_employee` (
+  `Role_id` int(5) NOT NULL AUTO_INCREMENT,
+  `Role_Description` varchar(20) NOT NULL,
+  PRIMARY KEY (`Role_id`)
+);
+INSERT INTO `role_employee` (`Role_id`, `Role_Description`) VALUES
+(1, 'Developer4'),
+(3, 'Researcher1   '),
+(4, 'Tester');
+

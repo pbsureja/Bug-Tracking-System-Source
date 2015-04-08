@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Sample jQuery Demo</title>
+<link rel="stylesheet"
+	href="jquery-ui-1.10.4.custom/css/sunny/jquery-ui-1.10.4.custom.css" />
+<link rel="stylesheet"
+	href="jQuery-Validation/css/validationEngine.jquery.css" />
+<script src="jquery-ui-1.10.4.custom/js/jquery-1.10.2.js"></script>
+<script src="jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.js"></script>
+<script src="jQuery-Validation/js/jquery.validationEngine.js"></script>
+<script
+	src="jQuery-Validation/js/languages/jquery.validationEngine-en.js"></script>
+<script src="js/jq.js"></script>
+
+<!-- <script>
+	function updateIt(){
+		document.getElementById("changeIt").innerHTML="<input type='file' name='fileUpload' />";
+	}
+</script>
+ -->
+<script>
+	function checkFile() {
+		var fieldObj=document.getElementById("confirm");
+		var FileName = fieldObj.value;
+		var FileExt = FileName.substr(FileName.lastIndexOf('.') + 1);
+
+		if ((FileExt != "jpeg" && FileExt != "gif" && FileExt != "jpg")) {
+			var error = "File type : " + FileExt + "\n\n";
+			//error += "Size: " + FileSizeMB + " MB \n\n";
+			error += "Please make sure your file is in gif or jpg format.\n\n";
+			alert(error);
+			return false;
+		}
+		return true;
+	}
+</script>
+</head>
+<body>
+	<center>
+		<br /> <br /> <br /> <br />
+		<form name="sample" id="sample" action="" method="post" onsubmit="return checkFile()">
+			<table>
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" name="firstName" id="firstName"
+						class="validate[required] text-input" /></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" name="lastName" id="lastName"
+						class="validate[required] text-input" /></td>
+				</tr>
+				<tr>
+					<td>BirthDate</td>
+					<td><input type="text" name="dob" id="dob"
+						class="validate[required] text-input datepicker" /></td>
+				</tr>
+				<!-- <tr>
+					<td>BirthDate</td>
+					<td><input type="text" name="dobC" id="dobC"
+						class="validate[future[NOW]required] text-input datepicker" /></td>
+				</tr> -->
+				<tr>
+					<td>Phone</td>
+					<td><input type="text" name="phone" id="phone"
+						class="validate[custom[phone]required] text-input" /></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email" id="email"
+						class="validate[custom[email]required] text-input" /></td>
+				</tr>
+				<!-- <tr>
+					<td>File</td>
+					<td>
+							<input type="file" name="fileUpload" id="fileUpload"
+						class="validate[required] text-input" />
+						<div id="changeIt">
+							<input type="button" onclick="updateIt()" name="update" value="update" />
+						</div>
+					</td>
+				</tr> -->
+
+				<!-- <tr>
+					<td><input type="file" name="confirm" id="confirm" /></td>
+					<td><p class="msg"></p></td>
+				</tr> -->
+				
+			</table>
+		</form>
+	</center>
+</body>
+</html>

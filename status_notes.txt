@@ -1,0 +1,28 @@
+task_assign
+task
+project
+module
+manager employee
+group_employee
+group
+employee_details
+department
+bug_snapshot
+
+
+
+-manager employee not working so removed manager employee id
+-see manager employee dao lolwa---insert methodg
+
+-completed tasks are manager employee jsps restructured like first name and last name etc
+-rewiring group employee table needs structure remodification
+-database changed removed pkey and changed some indexes to suit our need
+-changes in servlets made like update servlet
+-approaching to dao
+-you idiot princess full of shit see group employee dao and its insert method(huh )
+-insert method needs rewiring
+-you are super idiot princess i wonder what could happen to you huh seeing the shit you have made in this project i wonder what wold happen hahaha.reference group employeeinsertpage.jsp see the all bean stuff hahaha
+
+--want to check bean of employee as manager and Manager two methods exist
+
+select * from bts.group a,bts.manager_employee b,bts.employee_details c where a.manager_id=b.manager_id and b.employee_id -c.employee_id
